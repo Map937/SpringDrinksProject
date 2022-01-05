@@ -73,11 +73,11 @@ public class Drink {
 		this.colour = colour;
 	}
 
-	public boolean isFizzy() {
+	public boolean getIsFizzy() {
 		return isFizzy;
 	}
 
-	public void setFizzy(boolean isFizzy) {
+	public void setIsFizzy(boolean isFizzy) {
 		this.isFizzy = isFizzy;
 	}
 
