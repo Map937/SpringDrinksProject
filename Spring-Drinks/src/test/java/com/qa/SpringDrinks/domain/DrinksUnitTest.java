@@ -24,7 +24,7 @@ public class DrinksUnitTest {
 		assertNotNull(drink.getMl());
 		
 		assertEquals(drink.getDrinkName(), "Fanta");
-		assertEquals(drink.getColour(), "Orange");
+		assertEquals(drink.getColour(), "Orange"); 
 		assertEquals(drink.isFizzy(), true);
 		assertEquals(drink.getMl(), 500);
 		
