@@ -42,12 +42,12 @@ public class DrinkService implements ServiceMethods<Drink> {
 		Optional<Drink> optionalDrink = this.repo.findById(id);
 		if(optionalDrink.isPresent()) { 
 			Drink existingDrink = optionalDrink.get();
-		    existingDrink.setBrand(drink.getBrand()); 
+		    existingDrink.setDrinkName(drink.getDrinkName()); 
 		    existingDrink.setColour(drink.getColour());
-		    existingDrink.setIsFizzy(drink.getIsFizzy());
+		    existingDrink.setFizzy(drink.isFizzy());
 		    existingDrink.setMl(drink.getMl());
 			
-		    this.repo.saveAndFlush(existingDrink);
+		    return this.repo.saveAndFlush(existingDrink);
 		
 		}
 		return null;

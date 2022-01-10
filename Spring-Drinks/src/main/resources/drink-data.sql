@@ -1,0 +1,1 @@
+INSERT INTO drink(drink_name, colour, is_Fizzy, ml) VALUES ('Coke', 'Red', true, 500);

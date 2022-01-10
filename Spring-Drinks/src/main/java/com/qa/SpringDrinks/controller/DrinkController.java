@@ -36,13 +36,13 @@ public class DrinkController {
 	//ReadAll
 	@GetMapping("/readAll")
 	public ResponseEntity<List<Drink>> readAllDrinks() {
-		return new ResponseEntity<List<Drink>>(this.service.getAll(), HttpStatus.OK);
+		return new ResponseEntity<List<Drink>>(this.service.getAll(), HttpStatus.ACCEPTED);
 	}
 	
 	//ReadById
 	@GetMapping("/readById/{id}")
 	public ResponseEntity<Drink> readById(@PathVariable long id) {
-		return new ResponseEntity<Drink>(this.service.getById(id), HttpStatus.OK);
+		return new ResponseEntity<Drink>(this.service.getById(id), HttpStatus.ACCEPTED);
 	}
 	
 	//Update

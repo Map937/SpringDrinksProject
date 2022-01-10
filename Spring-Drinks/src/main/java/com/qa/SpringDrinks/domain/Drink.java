@@ -16,7 +16,7 @@ public class Drink {
 	private long id; 
 	
 	@Column(nullable = false)
-	private String brand; 
+	private String drinkName; 
 	
 	@Column(nullable = false)
 	private String colour;
@@ -30,24 +30,25 @@ public class Drink {
 	//Default Constructor
 	public Drink() {}
 	
-	//Testing Constructor
-	public Drink(String brand, String colour, boolean isFizzy, int ml) {
+	//Main Constructor
+	public Drink(String drinkName, String colour, boolean isFizzy, int ml) {
 		super(); 
-		this.brand = brand;
+		this.drinkName = drinkName;
 		this.colour = colour;
 		this.isFizzy = isFizzy;
 		this.ml = ml;
 	}
 	
-	//Main Constructor
-	public Drink(long id, String brand, String colour, boolean isFizzy, int ml) {
+	//Testing Constructor
+	public Drink(long id, String drinkName, String colour, boolean isFizzy, int ml) {
 		super();
 		this.id = id;
-		this.brand = brand;
+		this.drinkName = drinkName;
 		this.colour = colour;
 		this.isFizzy = isFizzy;
 		this.ml = ml;
 	}
+
 
 	public long getId() {
 		return id;
@@ -57,12 +58,12 @@ public class Drink {
 		this.id = id;
 	}
 
-	public String getBrand() {
-		return brand;
+	public String getDrinkName() {
+		return drinkName;
 	}
 
-	public void setBrand(String brand) {
-		this.brand = brand;
+	public void setDrinkName(String drinkName) {
+		this.drinkName = drinkName;
 	}
 
 	public String getColour() {
@@ -73,11 +74,11 @@ public class Drink {
 		this.colour = colour;
 	}
 
-	public boolean getIsFizzy() {
+	public boolean isFizzy() {
 		return isFizzy;
 	}
 
-	public void setIsFizzy(boolean isFizzy) {
+	public void setFizzy(boolean isFizzy) {
 		this.isFizzy = isFizzy;
 	}
 
@@ -91,13 +92,13 @@ public class Drink {
 
 	@Override
 	public String toString() {
-		return "Drink [id=" + id + ", brand=" + brand + ", colour=" + colour + ", isFizzy=" + isFizzy + ", ml=" + ml
-				+ "]";
+		return "Drink [id=" + id + ", drinkName=" + drinkName + ", colour=" + colour + ", isFizzy=" + isFizzy + ", ml="
+				+ ml + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(brand, colour, isFizzy, ml);
+		return Objects.hash(colour, drinkName, isFizzy, ml);
 	}
 
 	@Override
@@ -109,10 +110,9 @@ public class Drink {
 		if (getClass() != obj.getClass())
 			return false;
 		Drink other = (Drink) obj;
-		return Objects.equals(brand, other.brand) && Objects.equals(colour, other.colour) && isFizzy == other.isFizzy
-				&& ml == other.ml;
+		return Objects.equals(colour, other.colour) && Objects.equals(drinkName, other.drinkName)
+				&& isFizzy == other.isFizzy && ml == other.ml;
 	}
-	
 	
 
 }
